@@ -1,0 +1,4 @@
+west:
+  command: /work/.venv/bin/west build -p always -b nucleo_f410rb app
+  topdir: /work
+  version: 1.5.0

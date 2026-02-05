@@ -1,0 +1,58 @@
+cmake:
+  application:
+    configuration-dir: '/work/app'
+    source-dir: '/work/app'
+  board:
+    name: 'nucleo_f410rb'
+    path:
+     - '/work/zephyr/boards/st/nucleo_f410rb'
+    qualifiers: 'stm32f410rx'
+    revision: ''
+  devicetree:
+    bindings-dirs:
+     - '/work/zephyr/dts/bindings'
+    files:
+     - '/work/zephyr/boards/st/nucleo_f410rb/nucleo_f410rb.dts'
+    include-dirs:
+     - '/work/modules/hal/ambiq/dts'
+     - '/work/modules/hal/atmel/include'
+     - '/work/modules/hal/bouffalolab/include'
+     - '/work/modules/hal/bouffalolab/include/zephyr'
+     - '/work/modules/hal/gigadevice/include'
+     - '/work/modules/hal/microchip/include'
+     - '/work/modules/hal/microchip/dts'
+     - '/work/modules/hal/nuvoton/dts'
+     - '/work/modules/hal/nxp/dts'
+     - '/work/modules/hal/stm32/dts'
+     - '/work/modules/hal/ti/dts'
+     - '/work/zephyr/include'
+     - '/work/zephyr/include/zephyr'
+     - '/work/zephyr/dts/common'
+     - '/work/zephyr/dts/vendor'
+     - '/work/zephyr/dts/rx'
+     - '/work/zephyr/dts/x86'
+     - '/work/zephyr/dts/xtensa'
+     - '/work/zephyr/dts/sparc'
+     - '/work/zephyr/dts/riscv'
+     - '/work/zephyr/dts/posix'
+     - '/work/zephyr/dts/arm64'
+     - '/work/zephyr/dts/arm'
+     - '/work/zephyr/dts/arc'
+     - '/work/zephyr/dts'
+  kconfig:
+    files:
+     - '/work/zephyr/boards/st/nucleo_f410rb/nucleo_f410rb_defconfig'
+     - '/work/app/prj.conf'
+    user-files:
+     - '/work/app/prj.conf'
+  toolchain:
+    name: 'zephyr'
+    path: '/opt/zephyr-sdk'
+  zephyr:
+    version: '4.3.0'
+    zephyr-base: '/work/zephyr'
+version: '0.1.0'
+west:
+  command: '/work/.venv/bin/west build -p always -b nucleo_f410rb app'
+  topdir: '/work'
+  version: '1.5.0'
