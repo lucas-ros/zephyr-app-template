@@ -1,0 +1,13 @@
+manifest:
+  projects:
+    - name: zephyr
+      url: https://github.com/zephyrproject-rtos/zephyr
+      revision: v4.3.0
+      import: true
+
+    # - name: my-lib
+    #   url: https://github.com/lucas-ros/database.git
+    #   revision: master
+    #   path: modules/lib/my-lib   # <- padrão Zephyr
+  self:
+    path: app
